@@ -1,5 +1,5 @@
 export const TabName = {
-  Certificate:'certificate',
-  Annex:'annex',
-  ModelDiagram:'modelDiagram',
+  Certificate: 'certificate',
+  Annex: 'annex',
+  ModelDiagram: 'model-diagram'
 }

@@ -1,12 +1,6 @@
 <template>
-<div class="modelDiagram">
-
-</div>
+  <div class="modelDiagram"> 1321 </div>
 </template>
 
-<script setup >
-
-</script>
-<style lang="scss">
-
-</style>
+<script setup></script>
+<style lang="scss"></style>

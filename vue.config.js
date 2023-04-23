@@ -89,7 +89,11 @@ module.exports = {
         .use('sass-resources-loader')
         .loader('sass-resources-loader')
         .options({
-          resources: [resolvePath('src/design/color.scss'), resolvePath('src/design/_mixin.scss')]
+          resources: [
+            resolvePath('src/design/color.scss'),
+            resolvePath('src/design/_mixin.scss'),
+            resolvePath('src/design/font.scss')
+          ]
         })
         .end()
     })

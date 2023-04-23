@@ -1,6 +1,6 @@
 import { LAYOUT } from '@/router/constant'
 
-const HomeRoute = {
+const CertificateRoute = {
   path: '/certificate',
   meta: {
     title: 'certificate'
@@ -16,4 +16,4 @@ const HomeRoute = {
     }
   ]
 }
-export default HomeRoute
+export default CertificateRoute

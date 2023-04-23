@@ -15,8 +15,9 @@
 <style lang="scss">
   .common-layout {
     .main {
-      height: calc(100vh - 100px);
-      overflow:auto;
+      height: calc(100vh - 80px);
+      overflow: auto;
+      overflow-x: hidden;
     }
   }
 </style>

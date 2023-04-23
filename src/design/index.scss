@@ -11,8 +11,7 @@ input:-webkit-autofill {
   transition: background-color 5000s ease-in-out 0s !important;
 }
 
-*{
-
+* {
   box-sizing: border-box;
 }
 html {
@@ -29,7 +28,7 @@ body {
 
   &.color-weak {
     filter: invert(80%);
-}
+  }
 
   &.gray-mode {
     filter: grayscale(100%);
