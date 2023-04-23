@@ -4,6 +4,7 @@ import App from './App.vue'
 import routes, { createHistoryRouterByRoutes } from './router'
 import store from './store'
 import setup from './logics/setup'
+import 'windi.css'
 
 let router = null
 let instance = null

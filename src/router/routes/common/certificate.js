@@ -1,18 +1,18 @@
 import { LAYOUT } from '@/router/constant'
 
 const HomeRoute = {
-  path: '/home',
+  path: '/certificate',
   meta: {
-    title: '首页'
+    title: 'certificate'
   },
   component: LAYOUT,
   children: [
     {
       path: '',
       meta: {
-        title: '首页'
+        title: 'certificate'
       },
-      component: () => import('@/views/home/index.vue')
+      component: () => import('@/views/certificate/index.vue')
     }
   ]
 }

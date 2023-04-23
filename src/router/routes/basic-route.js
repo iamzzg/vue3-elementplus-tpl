@@ -24,7 +24,7 @@ export const PageNotFoundRoute = {
 export const RootRoute = {
   path: '/',
   name: 'Root',
-  redirect: '/home',
+  redirect: '/certificate',
   meta: {
     title: ''
   }

@@ -21,7 +21,7 @@ module.exports = {
   productionSourceMap: envObj.sourceMap,
   devServer: {
     port,
-    open: true,
+    open: false,
     overlay: {
       errors: false,
       warnings: false
@@ -53,7 +53,13 @@ module.exports = {
     },
     plugins: [
       AutoImport({
-        resolvers: [ElementPlusResolver()]
+        dts: true,
+        imports: ['vue', 'vue-router'], // 自动导入的库
+        resolvers: [ElementPlusResolver()],
+        eslintrc: {
+          // 解决 eslint no-def
+          enabled: true // <-- this
+        }
       }),
       Components({
         resolvers: [ElementPlusResolver()]
