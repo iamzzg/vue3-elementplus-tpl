@@ -1,5 +1,6 @@
+// 对于路由名字
 export const TabName = {
-  Certificate: 'certificate',
-  Annex: 'annex',
-  ModelDiagram: 'model-diagram'
+  Certificate: 'Certificate',
+  Annex: 'Annex',
+  ModelDiagram: 'ModelDiagram'
 }

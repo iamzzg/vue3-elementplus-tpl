@@ -54,7 +54,7 @@ module.exports = {
     plugins: [
       AutoImport({
         dts: true,
-        imports: ['vue', 'vue-router'], // 自动导入的库
+        imports: ['vue', 'vue-router', 'pinia'], // 自动导入的库
         resolvers: [ElementPlusResolver()],
         eslintrc: {
           // 解决 eslint no-def

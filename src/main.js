@@ -2,9 +2,7 @@ import './public-path'
 import { createApp } from 'vue'
 import App from './App.vue'
 import routes, { createHistoryRouterByRoutes } from './router'
-import store from './store'
-import setup from './logics/setup'
-import 'windi.css'
+import setupApp from './logics/setup'
 
 let router = null
 let instance = null
@@ -13,9 +11,9 @@ function render(props = {}) {
   const { container } = props
   router = createHistoryRouterByRoutes(routes)
 
-  instance = createApp(App).use(store).use(router)
+  instance = createApp(App)
 
-  setup(instance)
+  setupApp(instance, router)
 
   instance.mount(container ? container.querySelector('#app') : '#app')
 }

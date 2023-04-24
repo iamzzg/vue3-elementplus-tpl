@@ -17,11 +17,11 @@
     { key: TabName.Annex, label: '附件', name: TabName.Annex },
     { key: TabName.ModelDiagram, label: '模型图', name: TabName.ModelDiagram }
   ])
-  const activeTab = ref(panes.value[0].name)
+  const activeTab = ref(router.currentRoute.value.name)
 
   const handleClickTab = e => {
     router.push({
-      path: e.paneName
+      name: e.paneName
     })
   }
 </script>

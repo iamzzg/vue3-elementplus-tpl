@@ -7,15 +7,15 @@
       <p class="flex justify-end items-end pr-20px font-4-hao">
         <span>用字第</span>
         <span
-          class="border-0 !border-b border-gray-400 border-solid pb-1px text-center w-200px mx-2"
-          >xx</span
-        >
+          class="border-0 !border-b border-gray-400 border-solid pb-1px text-center w-200px mx-2">
+          xx
+        </span>
         <span>号</span>
       </p>
       <p
         class="font-bold font-2-xiaohao leading-8 mt-50px px-100px indent-2em text-left leading-30pt">
-        根据《中华人民共和国土地管理法》《中华人民共和国城乡规划法》和国家有关规定，经审核，本建设项目符合国土空间用途管制要求，核发此书。</p
-      >
+        根据《中华人民共和国土地管理法》《中华人民共和国城乡规划法》和国家有关规定，经审核，本建设项目符合国土空间用途管制要求，核发此书。
+      </p>
       <footer class="mt-auto mx-auto mb-100px flex flex-col font-3-hao">
         <p>核发机关</p>
         <p class="font-4-hao">
@@ -106,55 +106,31 @@
         </table>
 
         <header class="font-1-xiaohao font-bold mt-8">遵守事项</header>
-        <p class="second-indent"
-          >一、本书是自然资源主管部门依法审核建设项目用地预审和规划选址的 法定凭据。</p
-        >
+        <p class="second-indent">
+          一、本书是自然资源主管部门依法审核建设项目用地预审和规划选址的 法定凭据。
+        </p>
         <p class="second-indent">二、未经依法审核同意本书的各项内容不得随意变更。</p>
-        <p class="second-indent"
-          >三、本书所需附图及附件由相应权限的机关依法确定，与本书具有同等法律效力，附图指项目规划选址范围图，附件指建设用地要求。</p
-        >
-        <p class="second-indent"
-          >四、本书自核发起有效期三年，如对土地用途、建设项目选址等进行重大调整的，应当重新办理本书。</p
-        >
+        <p class="second-indent">
+          三、本书所需附图及附件由相应权限的机关依法确定，与本书具有同等法律效力，附图指项目规划选址范围图，附件指建设用地要求。
+        </p>
+        <p class="second-indent">
+          四、本书自核发起有效期三年，如对土地用途、建设项目选址等进行重大调整的，应当重新办理本书。
+        </p>
 
         <el-form-item>
           <el-button type="primary" @click="onSubmit">立即创建</el-button>
           <el-button>取消</el-button>
         </el-form-item>
       </el-form>
-
-      <!-- <table class="border-collapse w-full">
-        <tbody>
-          <tr>
-            <td class="px-1 break-words" rowspan="8">基本情况</td>
-          </tr>
-          <tr>
-            <td>项目名称</td>
-          </tr>
-          <tr>
-            <td>项目代码</td>
-          </tr>
-          <tr>
-            <td>建设单位名称</td>
-          </tr>
-          <tr>
-            <td>项目建设依据</td>
-          </tr>
-          <tr>
-            <td>项目拟选位置</td>
-          </tr>
-          <tr>
-            <td>拟用地面积 (含各地类明细) </td>
-          </tr>
-          <tr>
-            <td>拟建设规模</td>
-          </tr>
-        </tbody>
-      </table> -->
     </div>
   </div>
 </template>
 
+<script>
+  export default defineComponent({
+    name: 'Certificate'
+  })
+</script>
 <script setup>
   const formRef = ref(null)
   const form = ref({

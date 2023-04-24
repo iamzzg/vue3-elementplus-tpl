@@ -1,6 +1,9 @@
 {
   "name": "map-base-proj",
   "version": "0.1.0",
+  "author": {
+    "name": "dragon"
+  },
   "private": true,
   "scripts": {
     "build": "vue-cli-service build",
@@ -16,15 +19,16 @@
     "core-js": "^3.6.5",
     "element-plus": "^2.3.3",
     "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.35",
+    "pinia-plugin-persistedstate": "^3.1.0",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+    "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.14",
     "@vue/cli-plugin-eslint": "~4.5.14",
     "@vue/cli-plugin-router": "~4.5.14",
-    "@vue/cli-plugin-vuex": "~4.5.14",
     "@vue/cli-service": "~4.5.14",
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-prettier": "^6.0.0",

@@ -49,7 +49,11 @@
     </div>
   </div>
 </template>
-
+<script>
+  export default defineComponent({
+    name: 'Annex'
+  })
+</script>
 <script setup></script>
 <style lang="scss" scoped>
   .annex {
