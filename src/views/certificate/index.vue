@@ -132,8 +132,10 @@
   })
 </script>
 <script setup>
-  const formRef = ref(null)
-  const form = ref({
+  import { genFormModel, genFormRule, useForm } from '@/hooks/web/useForm'
+
+  const { formRef } = useForm()
+  const { formModel: form, resetFormModel } = genFormModel({
     projectName: '',
     projectCode: '',
     constructionUnitName: '',
@@ -143,9 +145,15 @@
     proposedConstructionScale: ''
   })
 
-  const rules = ref({
-    projectName: [{ required: true, message: '请输入项目名称', trigger: 'change' }]
-  })
+  const rules = genFormRule([
+    'projectName',
+    'projectCode',
+    'constructionUnitName',
+    'projctConstructionBasis',
+    'projctLocation',
+    'proposedLandArea',
+    'proposedConstructionScale'
+  ])
   const onSubmit = () => {
     formRef.value.validate()
   }

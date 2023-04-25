@@ -3,6 +3,8 @@ const { loadEnv } = require('./build/env')
 
 const AutoImport = require('unplugin-auto-import/webpack')
 const Components = require('unplugin-vue-components/webpack')
+const IconResolver = require('unplugin-icons/resolver')
+const Icons = require('unplugin-icons/webpack')
 const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 
 const path = require('path')
@@ -55,14 +57,30 @@ module.exports = {
       AutoImport({
         dts: true,
         imports: ['vue', 'vue-router', 'pinia'], // 自动导入的库
-        resolvers: [ElementPlusResolver()],
+        // 自动导入组件库和图标库
+        resolvers: [
+          ElementPlusResolver(),
+          IconResolver({
+            prefix: 'Icon'
+          })
+        ],
         eslintrc: {
           // 解决 eslint no-def
           enabled: true // <-- this
         }
       }),
       Components({
-        resolvers: [ElementPlusResolver()]
+        resolvers: [
+          ElementPlusResolver(),
+          // 自动注册图标组件
+          IconResolver({
+            enabledCollections: ['ep']
+          })
+        ],
+        dts: './components.d.ts'
+      }),
+      Icons({
+        autoInstall: true
       })
     ]
   },

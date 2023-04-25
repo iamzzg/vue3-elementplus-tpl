@@ -58,7 +58,7 @@ export const genFormRule = props => {
 
   props.forEach(item => {
     if (isString(item)) {
-      ret[prop] = {
+      ret[item] = {
         required: true,
         message: '该项是必填项',
         trigger: 'change'
