@@ -59,10 +59,10 @@ module.exports = {
         imports: ['vue', 'vue-router', 'pinia'], // 自动导入的库
         // 自动导入组件库和图标库
         resolvers: [
-          ElementPlusResolver(),
-          IconResolver({
-            prefix: 'Icon'
-          })
+          ElementPlusResolver()
+          // IconResolver({
+          //   prefix: 'Icon'
+          // })
         ],
         eslintrc: {
           // 解决 eslint no-def
@@ -71,17 +71,17 @@ module.exports = {
       }),
       Components({
         resolvers: [
-          ElementPlusResolver(),
+          ElementPlusResolver()
           // 自动注册图标组件
-          IconResolver({
-            enabledCollections: ['ep']
-          })
+          // IconResolver({
+          //   enabledCollections: ['ep']
+          // })
         ],
         dts: './components.d.ts'
-      }),
-      Icons({
-        autoInstall: true
       })
+      // Icons({
+      //   autoInstall: true
+      // })
     ]
   },
   chainWebpack(config) {
