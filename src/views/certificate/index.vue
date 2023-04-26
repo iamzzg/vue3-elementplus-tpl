@@ -137,7 +137,7 @@
 
   const { year, month, date } = useDate()
   const { formRef } = useForm()
-  const { formModel: form, resetFormModel } = genFormModel({
+  const { formModel: form } = genFormModel({
     projectName: '',
     projectCode: '',
     constructionUnitName: '',

@@ -1,7 +1,7 @@
 <template>
   <layout>
     <div class="p-20px">
-    <layout-content ></layout-content>
+      <layout-content></layout-content>
     </div>
   </layout>
 </template>
