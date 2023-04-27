@@ -88,14 +88,8 @@ module.exports = {
         chunks: 'all',
         cacheGroups: {
           'element-plus': {
-            test: /[\\/]node_modules[\\/]@?element-plus(.*)/,
+            test: /[\\/]node_modules[\\/]_?element-plus(.*)/,
             priority: 20,
-            reuseExistingChunk: true,
-            chunks: 'initial'
-          },
-          lodash: {
-            test: /[\\/]node_modules[\\/]_?lodash(.*)/,
-            priority: 30,
             reuseExistingChunk: true
           },
           commons: {

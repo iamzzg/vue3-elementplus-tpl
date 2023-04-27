@@ -12,7 +12,7 @@
         size="default">
         <p class="!text-20pt font-bold black text-center">**建设项目用地预审选址要求</p>
 
-        <CollapseTransitionList ref="collapseRef">
+        <CollapseTransitionList ref="collapseRef" @transitionEnd="onTransitionEnd">
           <p class="paragraph" v-show="showObj.show1">
             一、**建设项目（统一项目代码：**）已经市/区发展改革委批复项目建议书/同意立项/同意开展前期工作/已列入《**规划》（均需注明文名、文号）。（招拍挂项目还应表述）该项目为招拍挂出让项目。项目选址位于
             <el-form-item prop="projectSiteSelection">
@@ -187,7 +187,7 @@
         <p class="text-right">深圳市前海深港现代服务业合作区管理局</p>
         <p class="text-right">{{ getDateYYYYMMDD }}</p>
 
-        <div class="text-center">
+        <div class="text-center" ref="unitName">
           <el-button type="primary" @click="onSubmit" :disabled="currentIndex !== 4"
             >立即创建</el-button
           >
@@ -231,6 +231,7 @@
   ])
 
   const collapseRef = ref(null)
+  const unitName = ref(null)
 
   const showObj = ref({
     show1: true,
@@ -244,21 +245,24 @@
   const onSubmit = () => {
     // formRef.value.validate()
   }
-  let currentIndex = 1
+  let currentIndex = ref(1)
   let showNext = null
   onMounted(() => {
     showNext = (() => {
-      console.log(collapseRef.value)
       const len = collapseRef.value.$slots.default().length
       return (endIndex = len) => {
-        if (currentIndex > endIndex) return
-        currentIndex++
+        if (currentIndex.value > endIndex) return
+        currentIndex.value++
 
-        showObj.value[`show${currentIndex}`] = true
+        showObj.value[`show${currentIndex.value}`] = true
         return currentIndex
       }
     })()
   })
+
+  const onTransitionEnd = () => {
+    unitName.value.scrollIntoView({ block: 'end', behavior: 'smooth' })
+  }
 </script>
 <style lang="scss" scoped>
   .annex {
