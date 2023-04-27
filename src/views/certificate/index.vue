@@ -20,11 +20,11 @@
         <p>核发机关</p>
         <p class="font-4-hao">
           <span class="date font-3-hao">日期</span>
-          <span>xxx</span>
+          <span>{{ year }}</span>
           年
-          <span>xxx</span>
+          <span>{{ month }}</span>
           月
-          <span>xxx</span>
+          <span>{{ date }}</span>
           日
         </p>
       </footer>
@@ -117,10 +117,10 @@
           四、本书自核发起有效期三年，如对土地用途、建设项目选址等进行重大调整的，应当重新办理本书。
         </p>
 
-        <el-form-item>
+        <div class="text-center">
           <el-button type="primary" @click="onSubmit">立即创建</el-button>
           <el-button>取消</el-button>
-        </el-form-item>
+        </div>
       </el-form>
     </div>
   </div>
@@ -133,9 +133,11 @@
 </script>
 <script setup>
   import { genFormModel, genFormRule, useForm } from '@/hooks/web/useForm'
+  import { useDate } from '@/hooks/web/useDate'
 
+  const { year, month, date } = useDate()
   const { formRef } = useForm()
-  const { formModel: form, resetFormModel } = genFormModel({
+  const { formModel: form } = genFormModel({
     projectName: '',
     projectCode: '',
     constructionUnitName: '',

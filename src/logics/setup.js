@@ -17,3 +17,10 @@ export default (app, router) => {
 
   app.use(router)
 }
+
+// 全局注入 体积太大
+// function registerEPIcons(app) {
+//   for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+//     app.component(key, component)
+//   }
+// }

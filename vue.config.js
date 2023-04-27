@@ -3,8 +3,8 @@ const { loadEnv } = require('./build/env')
 
 const AutoImport = require('unplugin-auto-import/webpack')
 const Components = require('unplugin-vue-components/webpack')
-const IconResolver = require('unplugin-icons/resolver')
-const Icons = require('unplugin-icons/webpack')
+// const IconResolver = require('unplugin-icons/resolver')
+// const Icons = require('unplugin-icons/webpack')
 const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 
 const path = require('path')
@@ -59,10 +59,10 @@ module.exports = {
         imports: ['vue', 'vue-router', 'pinia'], // 自动导入的库
         // 自动导入组件库和图标库
         resolvers: [
-          ElementPlusResolver(),
-          IconResolver({
-            prefix: 'Icon'
-          })
+          ElementPlusResolver()
+          // IconResolver({
+          //   prefix: 'Icon'
+          // })
         ],
         eslintrc: {
           // 解决 eslint no-def
@@ -71,20 +71,49 @@ module.exports = {
       }),
       Components({
         resolvers: [
-          ElementPlusResolver(),
+          ElementPlusResolver()
           // 自动注册图标组件
-          IconResolver({
-            enabledCollections: ['ep']
-          })
+          // IconResolver({
+          //   enabledCollections: ['ep']
+          // })
         ],
         dts: './components.d.ts'
-      }),
-      Icons({
-        autoInstall: true
       })
-    ]
+      // Icons({
+      //   autoInstall: true
+      // })
+    ],
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        cacheGroups: {
+          'element-plus': {
+            test: /[\\/]node_modules[\\/]@?element-plus(.*)/,
+            priority: 20,
+            reuseExistingChunk: true,
+            chunks: 'initial'
+          },
+          lodash: {
+            test: /[\\/]node_modules[\\/]_?lodash(.*)/,
+            priority: 30,
+            reuseExistingChunk: true
+          },
+          commons: {
+            name: 'commons',
+            test: resolvePath('src/components'),
+            minChunks: 3,
+            priority: 5,
+            reuseExistingChunk: true
+          }
+        }
+      }
+    }
   },
   chainWebpack(config) {
+    // 移除preload prefetch插件
+    config.plugins.delete('preload')
+    config.plugins.delete('prefetch')
+
     // svg-icon
     config.module.rule('svg').exclude.add(resolvePath('src/assets/icons')).end()
 
