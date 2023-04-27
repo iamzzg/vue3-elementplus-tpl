@@ -203,6 +203,7 @@
   })
 </script>
 <script setup>
+  import { Remove, CirclePlus, ArrowDown } from '@element-plus/icons-vue'
   import { CollapseTransitionList } from '@/components/CollapseTransitionList'
   import { genFormModel, genFormRule, useForm } from '@/hooks/web/useForm'
   import { useDate } from '@/hooks/web/useDate'
@@ -302,7 +303,7 @@
           }
 
           &:hover {
-            & + span {
+            & ~ span {
               transition: background-color 0.3s linear;
               background-color: red;
               color: #fff;

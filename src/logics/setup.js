@@ -3,14 +3,11 @@ import 'normalize.css'
 import '@/design/index.scss'
 import 'windi.css'
 
-import * as ElementPlusIconsVue from '@element-plus/icons-vue'
-
 import resgisterGlobalComp from '@/components/resgisterGlobalComp'
 import { setupStore } from '@/stores/index'
 import { setupRouterGuard } from '@/router/guard'
 
 export default (app, router) => {
-  registerEPIcons(app)
   setupStore(app)
 
   resgisterGlobalComp(app)
@@ -21,8 +18,9 @@ export default (app, router) => {
   app.use(router)
 }
 
-function registerEPIcons(app) {
-  for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
-    app.component(key, component)
-  }
-}
+// 全局注入 体积太大
+// function registerEPIcons(app) {
+//   for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+//     app.component(key, component)
+//   }
+// }

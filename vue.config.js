@@ -82,9 +82,38 @@ module.exports = {
       // Icons({
       //   autoInstall: true
       // })
-    ]
+    ],
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        cacheGroups: {
+          'element-plus': {
+            test: /[\\/]node_modules[\\/]@?element-plus(.*)/,
+            priority: 20,
+            reuseExistingChunk: true,
+            chunks: 'initial'
+          },
+          lodash: {
+            test: /[\\/]node_modules[\\/]_?lodash(.*)/,
+            priority: 30,
+            reuseExistingChunk: true
+          },
+          commons: {
+            name: 'commons',
+            test: resolvePath('src/components'),
+            minChunks: 3,
+            priority: 5,
+            reuseExistingChunk: true
+          }
+        }
+      }
+    }
   },
   chainWebpack(config) {
+    // 移除preload prefetch插件
+    config.plugins.delete('preload')
+    config.plugins.delete('prefetch')
+
     // svg-icon
     config.module.rule('svg').exclude.add(resolvePath('src/assets/icons')).end()
 
