@@ -1,4 +1,4 @@
-import transitionList from './src/index.jsx'
+import transitionList from './src/index.vue'
 import { withInstall } from '@/utils'
 
 const comp = withInstall(transitionList)
