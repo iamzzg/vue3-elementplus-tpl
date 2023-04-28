@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "target": "ESNext",
     "jsx": "preserve",
     "paths": {
-      "@/*":["src/*"]
+      "@/*": ["src/*"]
     },
     "types": ["element-plus/global"]
   },
-  "exclude": ["node_modules","dist"]
+  "exclude": ["node_modules", "dist"]
 }

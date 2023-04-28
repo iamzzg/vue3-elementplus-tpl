@@ -44,7 +44,8 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        '@': resolvePath('src')
+        '@': resolvePath('src'),
+        '@element-plus/icons-vue': resolvePath('node_modules/@element-plus/icons-vue/dist/index.js')
       }
     },
     // 微应用配置
@@ -70,6 +71,9 @@ module.exports = {
         }
       }),
       Components({
+        // relative paths to the directory to search for components.
+        // dirs: ['src/components'],
+        dirs: [],
         resolvers: [
           ElementPlusResolver()
           // 自动注册图标组件
@@ -87,24 +91,18 @@ module.exports = {
       splitChunks: {
         chunks: 'all',
         cacheGroups: {
-          'element-plus': {
-            test: /[\\/]node_modules[\\/]@?element-plus(.*)/,
-            priority: 20,
-            reuseExistingChunk: true,
-            chunks: 'initial'
-          },
-          lodash: {
-            test: /[\\/]node_modules[\\/]_?lodash(.*)/,
-            priority: 30,
-            reuseExistingChunk: true
-          },
-          commons: {
-            name: 'commons',
-            test: resolvePath('src/components'),
-            minChunks: 3,
-            priority: 5,
-            reuseExistingChunk: true
-          }
+          // 'element-plus': {
+          //   test: /[\\/]node_modules[\\/]_?element-plus(.*)/,
+          //   priority: 20,
+          //   reuseExistingChunk: true
+          // },
+          // commons: {
+          //   name: 'commons',
+          //   test: resolvePath('src/components'),
+          //   minChunks: 3,
+          //   priority: 5,
+          //   reuseExistingChunk: true
+          // }
         }
       }
     }

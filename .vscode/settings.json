@@ -1,0 +1,56 @@
+{
+  "editor.fontSize": 18,
+  // 保存时格式化代码
+  "editor.formatOnSave": true,
+  // 重新设定tab缩进为2
+  "editor.tabSize": 2,
+  // 保存时自动使用插件校验，不需要再每次都使用脚本命令
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "editor.wordWrap": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // 使用prettier格式化
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "emmet.triggerExpansionOnTab": true,
+
+  // "emmet.includeLanguages": {
+  //   "javascript": "javascriptreact"
+  // },
+  // "files.associations": {
+  //   "*.js": "javascriptreact"
+  // },
+  "explorer.confirmDelete": false,
+  "eslint.format.enable": true,
+
+  //setting.json文件
+
+  "editor.formatOnType": true,
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "html", "vue"],
+  "js/ts.implicitProjectConfig.strictFunctionTypes": false,
+  "workbench.startupEditor": "none",
+  "i18n-ally.ignoredLocales": [],
+  "update.enableWindowsBackgroundUpdates": false,
+  "update.showReleaseNotes": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "update.mode": "manual",
+  "prettier.arrowParens": "avoid",
+  "prettier.endOfLine": "auto",
+  "prettier.trailingComma": "none",
+  "vetur.validation.script": false,
+  "npm.enableRunFromFolder": true,
+  "npm.scriptExplorerAction": "run"
+}

@@ -12,7 +12,7 @@
 <script>
   import { isExternal } from '@/utils/validate'
 
-  export default {
+  export default defineComponent({
     name: 'SvgIcon',
     props: {
       icon: {
@@ -45,7 +45,7 @@
         }
       }
     }
-  }
+  })
 </script>
 
 <style scoped>
