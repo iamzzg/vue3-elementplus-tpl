@@ -1,43 +1,59 @@
 <template>
   <div class="certificate">
-    <div class="certificate__page1">
-      <p class="font-1-hao font-family-fangsong">中华人民共和国</p>
-      <p class="text-gray-900 font-bold text-32pt mt-50px mb-0">建设项目</p>
-      <p class="text-gray-900 font-bold text-32pt">用地预审与选址意见书</p>
-      <p class="flex justify-end items-end pr-20px font-4-hao">
-        <span>用字第</span>
-        <span
+    <el-form
+      :model="form"
+      ref="formRef"
+      :rules="rules"
+      label-width="0"
+      :inline="false"
+      size="default">
+      <div class="certificate__page1">
+        <p class="font-1-hao font-family-fangsong">中华人民共和国</p>
+        <p class="text-gray-900 font-bold text-32pt mt-50px mb-0">建设项目</p>
+        <p class="text-gray-900 font-bold text-32pt">用地预审与选址意见书</p>
+        <p class="flex justify-end items-center pr-20px font-4-hao">
+          <span>用字第</span>
+          <!-- <span
           class="border-0 !border-b border-gray-400 border-solid pb-1px text-center w-200px mx-2">
           xx
-        </span>
-        <span>号</span>
-      </p>
-      <p
-        class="font-bold font-2-xiaohao leading-8 mt-50px px-100px indent-2em text-left leading-30pt">
-        根据《中华人民共和国土地管理法》《中华人民共和国城乡规划法》和国家有关规定，经审核，本建设项目符合国土空间用途管制要求，核发此书。
-      </p>
-      <footer class="mt-auto mx-auto mb-100px flex flex-col font-3-hao">
-        <p>核发机关</p>
-        <p class="font-4-hao">
-          <span class="date font-3-hao">日期</span>
-          <span>{{ year }}</span>
-          年
-          <span>{{ month }}</span>
-          月
-          <span>{{ date }}</span>
-          日
-        </p>
-      </footer>
-    </div>
+        </span> -->
+          <el-form-item prop="wordNo" class="!mb-0 mx-2">
+            <el-input-number
+              v-model="form.wordNo"
+              :min="0"
+              :step="1"
+              :controls="true"
+              controls-position="right">
+            </el-input-number>
+          </el-form-item>
 
-    <div class="certificate__page2">
-      <el-form
-        :model="form"
-        ref="formRef"
-        :rules="rules"
-        label-width="0"
-        :inline="false"
-        size="default">
+          <span>号</span>
+        </p>
+        <p
+          class="font-bold font-2-xiaohao leading-8 mt-50px px-100px indent-2em text-left leading-30pt">
+          根据《中华人民共和国土地管理法》《中华人民共和国城乡规划法》和国家有关规定，经审核，本建设项目符合国土空间用途管制要求，核发此书。
+        </p>
+        <footer class="mt-auto mx-auto mb-100px flex flex-col font-3-hao">
+          <p>核发机关</p>
+          <p class="font-4-hao">
+            <span class="date font-3-hao">日期</span>
+            <!-- <span>{{ year }}</span>
+            年
+            <span>{{ month }}</span>
+            月
+            <span>{{ date }}</span>
+            日 -->
+            <el-date-picker
+              v-model="form.date"
+              type="date"
+              placeholder="选择日期时间"
+              format="YYYY年MM月DD日">
+            </el-date-picker>
+          </p>
+        </footer>
+      </div>
+
+      <div class="certificate__page2">
         <table class="border-collapse w-full">
           <tbody>
             <tr>
@@ -121,8 +137,8 @@
           <el-button type="primary" @click="onSubmit">立即创建</el-button>
           <el-button>取消</el-button>
         </div>
-      </el-form>
-    </div>
+      </div>
+    </el-form>
   </div>
 </template>
 
@@ -133,11 +149,10 @@
 </script>
 <script setup>
   import { genFormModel, genFormRule, useForm } from '@/hooks/web/useForm'
-  import { useDate } from '@/hooks/web/useDate'
 
-  const { year, month, date } = useDate()
   const { formRef } = useForm()
   const { formModel: form } = genFormModel({
+    wordNo: 0,
     projectName: '',
     projectCode: '',
     constructionUnitName: '',
@@ -148,6 +163,7 @@
   })
 
   const rules = genFormRule([
+    'wordNo',
     'projectName',
     'projectCode',
     'constructionUnitName',

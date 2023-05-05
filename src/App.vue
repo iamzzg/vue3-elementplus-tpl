@@ -1,5 +1,5 @@
 <template>
-  <el-config-provider :z-index="zIndex" :size="size">
+  <el-config-provider :z-index="zIndex" :size="size" :locale="locale">
     <router-view />
   </el-config-provider>
 </template>
@@ -8,7 +8,7 @@
   import { ElConfigProvider } from 'element-plus'
   import appSetting from './settings/appSetting'
 
-  const { zIndex, size } = appSetting
+  const { zIndex, size, locale } = appSetting
 </script>
 <style lang="scss">
   #app {

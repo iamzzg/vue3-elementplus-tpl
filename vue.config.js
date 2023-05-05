@@ -91,18 +91,18 @@ module.exports = {
       splitChunks: {
         chunks: 'all',
         cacheGroups: {
-          // 'element-plus': {
-          //   test: /[\\/]node_modules[\\/]_?element-plus(.*)/,
-          //   priority: 20,
-          //   reuseExistingChunk: true
-          // },
-          // commons: {
-          //   name: 'commons',
-          //   test: resolvePath('src/components'),
-          //   minChunks: 3,
-          //   priority: 5,
-          //   reuseExistingChunk: true
-          // }
+          'element-plus': {
+            test: /[\\/]node_modules[\\/]_?element-plus(.*)/,
+            priority: 20,
+            reuseExistingChunk: true
+          },
+          commons: {
+            name: 'commons',
+            test: resolvePath('src/components'),
+            minChunks: 3,
+            priority: 5,
+            reuseExistingChunk: true
+          }
         }
       }
     }
