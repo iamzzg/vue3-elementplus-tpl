@@ -8,7 +8,7 @@ export function isExternal(path) {
 
 export function isType(type) {
   return function (arg) {
-    return Object.propotype.toString.call(arg) == `[object ${type}]`
+    return Object.prototype.toString.call(arg) == `[object ${type}]`
   }
 }
 
