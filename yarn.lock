@@ -3899,6 +3899,11 @@
   dependencies:
     "domelementtype" "^2.3.0"
 
+"dompurify@^2.4.1":
+  "integrity" "sha512-jggCCd+8Iqp4Tsz0nIvpcb22InKEBrGz5dw3EQJMs8HPJDsKbFIO3STYtAvCfDx26Muevn1MHVI0XxjgFfmiSA=="
+  "resolved" "http://192.168.1.41:9091/repository/npm_group/dompurify/-/dompurify-2.4.5.tgz"
+  "version" "2.4.5"
+
 "domready@1.0.8":
   "integrity" "sha512-uIzsOJUNk+AdGE9a6VDeessoMCzF8RrZvJCX/W8QtyfgdR6Uofn/MvRonih3OtCO79b2VDzDOymuiABrQ4z3XA=="
   "resolved" "https://registry.npmmirror.com/domready/-/domready-1.0.8.tgz"
@@ -3969,6 +3974,11 @@
     "inherits" "^2.0.1"
     "readable-stream" "^2.0.0"
     "stream-shift" "^1.0.0"
+
+"earcut@^2.2.4":
+  "integrity" "sha512-/pjZsA1b4RPHbeWZQn66SWS8nZZWLQQ23oE3Eam7aroEFGEvwKAsJfZ9ytiEMycfzXWpca4FA9QIOehf7PocBQ=="
+  "resolved" "http://192.168.1.41:9091/repository/npm_group/earcut/-/earcut-2.2.4.tgz"
+  "version" "2.2.4"
 
 "easy-stack@1.0.1":
   "integrity" "sha512-wK2sCs4feiiJeFXn3zvY0p41mdU5VUgbgs1rNsc/y5ngFUijdWd+iIN8eoyuZHKB8xN6BL4PdWmzqFmxNg6V2w=="
@@ -6665,10 +6675,20 @@
   "resolved" "https://registry.npmmirror.com/merge2/-/merge2-1.4.1.tgz"
   "version" "1.4.1"
 
+"mersenne-twister@^1.1.0":
+  "integrity" "sha512-mUYWsMKNrm4lfygPkL3OfGzOPTR2DBlTkBNHM//F6hGp8cLThY897crAlk3/Jo17LEOOjQUrNAx6DvgO77QJkA=="
+  "resolved" "http://192.168.1.41:9091/repository/npm_group/mersenne-twister/-/mersenne-twister-1.1.0.tgz"
+  "version" "1.1.0"
+
 "methods@~1.1.2":
   "integrity" "sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w=="
   "resolved" "https://registry.npmmirror.com/methods/-/methods-1.1.2.tgz"
   "version" "1.1.2"
+
+"mgrs@1.0.0":
+  "integrity" "sha512-awNbTOqCxK1DBGjalK3xqWIstBZgN6fxsMSiXLs9/spqWkF2pAhb2rrYCFSsr1/tT7PhcDGjZndG8SWYn0byYA=="
+  "resolved" "http://192.168.1.41:9091/repository/npm_group/mgrs/-/mgrs-1.0.0.tgz"
+  "version" "1.0.0"
 
 "micromatch@^3.1.10", "micromatch@^3.1.4":
   "integrity" "sha512-MWikgl9n9M3w+bpsY3He8L+w9eF9338xRl8IAO5viDizwSzziFEyUzo2xrrloB64ADbTf8uA8vRqqttDTOmccg=="
@@ -8139,6 +8159,14 @@
   "integrity" "sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA=="
   "resolved" "https://registry.npmmirror.com/progress/-/progress-2.0.3.tgz"
   "version" "2.0.3"
+
+"proj4@^2.9.0":
+  "integrity" "sha512-BoDXEzCVnRJVZoOKA0QHTFtYoE8lUxtX1jST38DJ8U+v1ixY70Kpwi0Llu6YqSWEH2xqu4XMEBNGcgeRIEywoA=="
+  "resolved" "http://192.168.1.41:9091/repository/npm_group/proj4/-/proj4-2.9.0.tgz"
+  "version" "2.9.0"
+  dependencies:
+    "mgrs" "1.0.0"
+    "wkt-parser" "^1.3.1"
 
 "promise-inflight@^1.0.1":
   "integrity" "sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g=="
@@ -9682,6 +9710,24 @@
     "loader-utils" "^1.1.0"
     "neo-async" "^2.6.0"
 
+"three@^0.146.0":
+  "integrity" "sha512-1lvNfLezN6OJ9NaFAhfX4sm5e9YCzHtaRgZ1+B4C+Hv6TibRMsuBAM5/wVKzxjpYIlMymvgsHEFrrigEfXnb2A=="
+  "resolved" "http://192.168.1.41:9091/repository/npm_group/three/-/three-0.146.0.tgz"
+  "version" "0.146.0"
+
+"threeMap@^1.0.10":
+  "integrity" "sha512-0tJe9tKTW8flifoBewcFICCFSjz1xBCIuQE3t22eqTh3dLbPrnJc7HPahFkCvRyDz0yOckc4On41/JhQdyzAKg=="
+  "resolved" "http://192.168.1.41:9091/repository/npm_group/threeMap/-/threeMap-1.0.10.tgz"
+  "version" "1.0.10"
+  dependencies:
+    "dompurify" "^2.4.1"
+    "earcut" "^2.2.4"
+    "mersenne-twister" "^1.1.0"
+    "proj4" "^2.9.0"
+    "three" "^0.146.0"
+    "urijs" "^1.18.12"
+    "vue" "^3.2.41"
+
 "through@^2.3.6":
   "integrity" "sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg=="
   "resolved" "https://registry.npmmirror.com/through/-/through-2.3.8.tgz"
@@ -10072,6 +10118,11 @@
   dependencies:
     "punycode" "^2.1.0"
 
+"urijs@^1.18.12":
+  "integrity" "sha512-HXgFDgDommxn5/bIv0cnQZsPhHDA90NPHD6+c/v21U5+Sx5hoP8+dP9IZXBU1gIfvdRfhG8cel9QNPeionfcCQ=="
+  "resolved" "http://192.168.1.41:9091/repository/npm_group/urijs/-/urijs-1.19.11.tgz"
+  "version" "1.19.11"
+
 "urix@^0.1.0":
   "integrity" "sha512-Am1ousAhSLBeB9cG/7k7r2R0zj50uDRlZHPGbazid5s9rlF1F/QKYObEKSIunSjIOkJZqwRRLpvewjEkM7pSqg=="
   "resolved" "https://registry.npmmirror.com/urix/-/urix-0.1.0.tgz"
@@ -10269,7 +10320,7 @@
   "resolved" "https://registry.npmmirror.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   "version" "1.9.1"
 
-"vue@*", "vue@^2 || ^3.0.0-0", "vue@^2.6.14 || ^3.2.0", "vue@^3.0.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.2.0", "vue@2 || 3", "vue@3.2.47":
+"vue@*", "vue@^2 || ^3.0.0-0", "vue@^2.6.14 || ^3.2.0", "vue@^3.0.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.2.0", "vue@^3.2.41", "vue@2 || 3", "vue@3.2.47":
   "integrity" "sha512-60188y/9Dc9WVrAZeUVSDxRQOZ+z+y5nO2ts9jWXSTkMvayiWxCWOWtBQoYjLeccfXkiiPZWAHcV+WTPhkqJHQ=="
   "resolved" "https://registry.npmmirror.com/vue/-/vue-3.2.47.tgz"
   "version" "3.2.47"
@@ -10525,6 +10576,11 @@
   "integrity" "sha512-P1mzPEjgFMZLX0ZqfFht4fhV/FX8DTG7ERG1fBLiWvd34pTLVReS5CVsewKn9PApSgXnVfPWwvq+qUsRwpnwFA=="
   "resolved" "https://registry.npmmirror.com/windicss/-/windicss-3.5.6.tgz"
   "version" "3.5.6"
+
+"wkt-parser@^1.3.1":
+  "integrity" "sha512-A26BOOo7sHAagyxG7iuRhnKMO7Q3mEOiOT4oGUmohtN/Li5wameeU4S6f8vWw6NADTVKljBs8bzA8JPQgSEMVQ=="
+  "resolved" "http://192.168.1.41:9091/repository/npm_group/wkt-parser/-/wkt-parser-1.3.2.tgz"
+  "version" "1.3.2"
 
 "word-wrap@~1.2.3":
   "integrity" "sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ=="

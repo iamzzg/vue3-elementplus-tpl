@@ -25,6 +25,7 @@
     "nprogress": "^0.2.0",
     "pinia": "^2.0.35",
     "pinia-plugin-persistedstate": "^3.1.0",
+    "threeMap": "^1.0.10",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
   },
